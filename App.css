@@ -1,0 +1,76 @@
+@import url('https://fonts.googleapis.com/css2?family=Noto+Sans:ital,wght@0,100..900;1,100..900&display=swap');
+@import "tailwindcss";
+@import "tw-animate-css";
+
+@custom-variant dark (&:is(.dark *));
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+/* 3. Define theme variables */
+@theme {
+  --font-noto:"Noto Sans", sans-serif;  
+}
+
+/* 4. Apply the font family */
+@layer base {
+  :root {
+    font-family: var(--font-noto);
+  }
+  .font-noto {
+    font-family: var(--font-noto);
+  }
+}
+
+@layer utilities {
+  .scrollbar-hide {
+    &::-webkit-scrollbar {
+      display: none; 
+    }
+  }
+}
+
+@layer utilities {
+  #nprogress .bar {
+    height: 3px;
+    background: linear-gradient(to top right, #facc15, #ec4899, #8b5cf6);
+  }
+
+  #nprogress .spinner-icon {
+    border-top-color: #ec4899;
+    border-left-color: #ec4899;
+  }
+}
+
+
+
+
+/* <------------------------------- Scrool Bar Styling -------------------------------> */
+html, body {
+  margin: 0;
+  padding: 0;
+  overflow: hidden; 
+  height: 100%;
+}
+
+/* index.css or global.css */
+::-webkit-scrollbar {
+  width: 10px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: transparent;
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #888;
+  border-radius: 6px;
+  border: 2px solid transparent;
+  background-clip: content-box;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background-color: #555;
+}
+/* <------------------------------- Scrool Bar Styling -------------------------------> */
