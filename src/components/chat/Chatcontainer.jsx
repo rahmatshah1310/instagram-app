@@ -5,6 +5,14 @@ import { useChat } from "@/features/context/ChatContext";
 import ChatInput from "@/components/chat/ChatInput";
 
 const Chatcontainer = () => {
+     const {
+    messages,
+    sendMessage,
+    messagesEndRef,
+    currentUserId,
+    conversations,
+  } = useChat();
+  const navigate = useNavigate();
   return (
     <div>Chatcontainer</div>
   )
