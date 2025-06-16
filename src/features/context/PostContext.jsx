@@ -150,7 +150,6 @@ export const PostProvider = ({ children }) => {
     }
   };
 
-  // Post context value
   const value = {
     uploading,
     uploadedImageUrl,
