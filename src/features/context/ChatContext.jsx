@@ -15,7 +15,6 @@ export const ChatProvider = ({ children }) => {
   const messagesEndRef = useRef(null);
   const currentUserId = 'user1'; // Should come from auth system
 
-  // Fetch conversations with real-time updates
   useEffect(() => {
     const q = query(collection(firestore, 'conversations'), orderBy('lastMessage.timestamp', 'desc'));
     const unsubscribe = onSnapshot(q, (snapshot) => {
