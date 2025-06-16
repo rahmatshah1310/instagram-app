@@ -100,7 +100,6 @@ export const AuthProvider = ({ children }) => {
     }
   };
 
-  // Monitor auth state changes and fetch user profile
   useEffect(() => {
     const unsubscribe = onAuthStateChanged(auth, async (firebaseUser) => {
       if (firebaseUser) {
@@ -143,5 +142,4 @@ export const AuthProvider = ({ children }) => {
   );
 };
 
-// Custom Hook to Use AuthContext
 export const useAuth = () => useContext(AuthContext);
